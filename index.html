@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шинэ жилийн урилга</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Эхний хуудас -->
+    <div class="page" id="page1">
+        <div class="invitation">
+            <h1>Шинэ жилийн баярын урилга!</h1>
+            <p>Хүндэт хамт олондоо шинэ жилийн баярын мэнд дэвшүүлж, 2024 оныг хамтдаа угтахад урьж байна.</p>
+            <p>Та манай шинэ жилийн ширээний нэгэн хэсэг болж, баяр хөөртэй орчныг бүрдүүлээрэй!</p>
+            <button id="getSeatBtn">Та энд дарж суудлын дугаараа авна уу</button>
+        </div>
+    </div>
+
+    <!-- Хоёрдугаар хуудас -->
+    <div class="page" id="page2" style="display:none;">
+        <div class="seat-info">
+            <h2>Баяр хүргэе!</h2>
+            <p>Та <span id="seatNumber"></span> дэх дугаарын ширээнд суухаар боллоо.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
