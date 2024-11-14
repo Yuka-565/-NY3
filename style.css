@@ -14,6 +14,52 @@ body {
     height: 100vh;
     overflow: hidden;
     flex-direction: column;
+    position: relative;
+}
+
+/* Цасан ширхэгийн GIF */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('snow.gif'); /* Цасан ширхэгийн GIF-ийн зам */
+    background-size: cover;
+    opacity: 0.4; /* Алслагдсан эффект үүсгэх */
+    pointer-events: none;
+}
+
+/* Цасан ширхэгийн будархай эффект */
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.5;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    animation: snow 10s linear infinite;
+}
+
+/* Анимаци цасан ширхэгийн хөдөлгөөн */
+@keyframes snow {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
 }
 
 /* Эхний хуудас */
@@ -88,6 +134,7 @@ button:hover {
     color: #333;
 }
 
+/* Дэлгэцийн хэмжээ 768px-аас бага үед */
 @media (max-width: 768px) {
     #page1, #page2 {
         padding: 30px;
