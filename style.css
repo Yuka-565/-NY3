@@ -31,7 +31,7 @@ body::before {
     pointer-events: none;
 }
 
-/* Цасан ширхэгийн будархай эффект */
+/* Цасан ширхэгийн үүсгэгч */
 .snowflakes {
     position: absolute;
     top: 0;
@@ -43,6 +43,7 @@ body::before {
     opacity: 0.5;
 }
 
+/* Цасан ширхэгийн стиль */
 .snowflake {
     position: absolute;
     background-color: white;
