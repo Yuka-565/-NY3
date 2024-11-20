@@ -1,6 +1,22 @@
-// Шинэ жилийн урилгын хуудас дээрх товч дарсан үед
-document.getElementById('getSeatBtn').addEventListener('click', function() {
-    // Хоёрдугаар хуудас руу шилжих
-    document.getElementById('page1').style.display = 'none';
-    document.getElementById('page2').style.display = 'block';
-});
+// Цасан ширхэгүүдийг үүсгэх функц
+function createSnowflakes() {
+    const snowflakesContainer = document.querySelector('.snowflakes');
+
+    // Цасан ширхэгийн тоо
+    const numberOfSnowflakes = 100;
+
+    for (let i = 0; i < numberOfSnowflakes; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        
+        // Рандом хурд, байрлал, эргэлт
+        snowflake.style.left = `${Math.random() * 100}vw`; // Рандом байрлал
+        snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Рандом хурд
+        snowflake.style.animationDelay = `${Math.random() * 5}s`; // Рандом хожимдол
+
+        snowflakesContainer.appendChild(snowflake);
+    }
+}
+
+// Цасан ширхэгүүдийг үүсгэх
+createSnowflakes();
