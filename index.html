@@ -7,21 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Эхний хуудас -->
-    <div class="page" id="page1">
+    <!-- Нэг хуудас -->
+    <div class="page" id="page">
         <div class="invitation">
             <h1>Шинэ жилийн баярын урилга!</h1>
             <p>Хүндэт хамт олондоо шинэ жилийн баярын мэнд дэвшүүлж, 2024 оныг хамтдаа угтахад урьж байна.</p>
             <p>Та манай шинэ жилийн ширээний нэгэн хэсэг болж, баяр хөөртэй орчныг бүрдүүлээрэй!</p>
-            <button id="getSeatBtn">Та энд дарж баяр хүргэе!</button>
+            <button id="getSeatBtn">Та энд дарж суудлын дугаараа авна уу</button>
         </div>
-    </div>
 
-    <!-- Хоёрдугаар хуудас -->
-    <div class="page" id="page2" style="display:none;">
-        <div class="seat-info">
+        <!-- Суудлын дугаар болон баяр хүргэе хэсэг -->
+        <div class="seat-info" id="seatInfo" style="display:none;">
             <h2>Баяр хүргэе!</h2>
-            <p>Шинэ жилийн баярт хамт оролцохыг урьж байна!</p>
+            <p>Та <span id="seatNumber"></span> дэх дугаарын ширээнд суухаар боллоо.</p>
         </div>
     </div>
 
