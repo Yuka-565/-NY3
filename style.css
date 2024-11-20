@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #333; /* Хар фон */
+    background-color: #f7f7f7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@ body {
     position: relative;
 }
 
-/* Сар цагаан гэрэл нэмэх */
+/* Цасан ширхэгийн GIF */
 body::before {
     content: '';
     position: absolute;
@@ -25,23 +25,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('moonlight.png'); /* Сарны гэрэлний GIF эсвэл зураг */
+    background-image: url('snow.gif'); /* Цасан ширхэгийн GIF-ийн зам */
     background-size: cover;
-    opacity: 0.3; /* Сарны гэрэлний эффект */
-    pointer-events: none;
-}
-
-/* Цасан ширхэгийн GIF */
-body::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('snow.gif'); /* Цасан ширхэгийн GIF */
-    background-size: cover;
-    opacity: 0.5; /* Алслагдсан эффект үүсгэх */
+    opacity: 0.4; /* Алслагдсан эффект үүсгэх */
     pointer-events: none;
 }
 
@@ -54,7 +40,7 @@ body::after {
     height: 100%;
     pointer-events: none;
     z-index: 999;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 /* Цасан ширхэгийн стиль */
@@ -77,33 +63,8 @@ body::after {
     }
 }
 
-/* Санта болон цаа буга анимейшн */
-.santa-and-deer {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    width: 100px;
-    height: 100px;
-    background-image: url('santa-deer.gif'); /* Санта болон цаа буга анимейшн GIF */
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: santaMove 30s linear infinite;
-}
-
-/* Санта болон цаа буга хөдөлгөх анимаци */
-@keyframes santaMove {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-/* Урилгын хэсэг */
-#page {
+/* Шинэ жилийн уур амьсгалтай фон */
+.page {
     background: linear-gradient(45deg, #ff6f61, #6a98d1, #f3b230);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
@@ -132,21 +93,39 @@ body::after {
 }
 
 .invitation p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 20px;
+}
+
+/* GIF контейнер */
+.santa-gif-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Цасан ширхэгүүдийн анимаци */
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: snow 10s linear infinite;
+}
+
+/* Ширээний мэдээлэл */
+#seatNumber {
+    font-size: 2.5em;
+    color: #3b8e7f;
 }
 
 /* Дэлгэцийн хэмжээ 768px-аас бага үед */
 @media (max-width: 768px) {
-    #page {
-        padding: 30px;
-    }
-
     .invitation h1 {
         font-size: 2.5em;
     }
 
     .invitation p {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 }
