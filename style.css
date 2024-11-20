@@ -17,7 +17,7 @@ body {
     position: relative;
 }
 
-/* Цасан ширхэгийн GIF */
+/* Сар цагаан гэрэл нэмэх */
 body::before {
     content: '';
     position: absolute;
@@ -25,7 +25,21 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('snow.gif'); /* Цасан ширхэгийн GIF-ийн зам */
+    background-image: url('moonlight.png'); /* Сарны гэрэлний GIF эсвэл зураг */
+    background-size: cover;
+    opacity: 0.3; /* Сарны гэрэлний эффект */
+    pointer-events: none;
+}
+
+/* Цасан ширхэгийн GIF */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('snow.gif'); /* Цасан ширхэгийн GIF */
     background-size: cover;
     opacity: 0.5; /* Алслагдсан эффект үүсгэх */
     pointer-events: none;
@@ -60,6 +74,31 @@ body::before {
     }
     100% {
         transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Санта болон цаа буга анимейшн */
+.santa-and-deer {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100px;
+    height: 100px;
+    background-image: url('santa-deer.gif'); /* Санта болон цаа буга анимейшн GIF */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: santaMove 30s linear infinite;
+}
+
+/* Санта болон цаа буга хөдөлгөх анимаци */
+@keyframes santaMove {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
     }
 }
 
